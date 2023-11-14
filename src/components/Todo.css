@@ -1,0 +1,99 @@
+:read-only{
+    --col1: whitesmoke;
+    --col2:rgb(13, 13, 15);
+}
+
+.todo-app {
+    background-color: var(--col2);
+    border-radius: 7px;
+    color:  var(--col1);
+    align-items: center;
+    padding-block: 10px;
+}
+
+.todo-form form {
+    padding-block: 50px;
+}
+
+.todo-form form input[type=button]{
+    height: max-content;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+
+}
+
+
+.todo-form form input[type=text]{
+    width: 50%;
+    height: 30px;
+    font-size: xx-large;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    appearance: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: 3px solid gray;
+    transition: 0.2s;
+}
+
+.todo-form form input[type=text]:focus{
+    border-bottom: 5px solid rgb(91, 162, 255);
+}
+.todo-list {
+    margin-top: 20px;
+    transition: 1s;
+}
+
+.todo-list li{
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+*::selection {
+    background-color: var(--col1);
+    color: var(--col2);
+}
+.todo-list li:hover{
+    background-color: var(--col1);
+    color: var(--col2);
+}
+
+.line-cross{
+    text-decoration: line-through;
+}
+
+
+@keyframes strike{
+    0%   { width : 0; }
+    100% { width: 100%; }
+}
+.strike {
+    position: relative;
+    color: rgb(58, 58, 58);
+}
+.strike::after {
+    content: ' ';
+    position: absolute;
+    top: 52.5%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(232, 86, 86);
+    animation-name: strike;
+    animation-duration: 1s;
+    animation-timing-function:  cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
+
+.todo{
+    margin: 5px;
+    border-radius: 3px;
+}

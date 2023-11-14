@@ -1,0 +1,49 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+
+  opacity: 0%;
+  width: 120px;
+  background-color: rgb(254, 1, 1);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: relative;
+  transform: translateX(20px);
+  position: absolute;
+  z-index: 1;
+  transition: 1.2s;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 100%;
+  transform: translateX(0px);
+  visibility: visible;
+  transition: 0.2s;
+}
